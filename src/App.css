@@ -1,38 +1,161 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
   min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 40px);
+  align-items: stretch; /* Stretch components to fill the container vertically */
+}
+
+.left,
+.right {
+  flex: 1; /* Equal width for both components */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+.left {
+  border-right: 1px solid rgba(255, 255, 255, 0.2); /* Dividing line */
+}
+
+h2 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+label,
+select,
+input {
+  display: block;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 5px;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/* Bitcoin Price Tracker Styles */
+.bitcoin-price-tracker {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bitcoin-price {
+  font-size: 2.5em;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bitcoin-price-tracker select {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+/* Satoshi Equivalent Calculator Styles */
+.satoshi-equivalent-calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styles for the Change Amount button */
+.change-amount-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  background-color: #000000; /* Black background */
+  color: rgba(255, 255, 255, 0.484); /* White text */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Faint white outline */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.change-amount-button:hover {
+  background-color: #1a1a1a; /* Slightly lighter black on hover */
+}
+
+/* Styles for the Set button */
+.set-amount-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  background-color: #ff9800;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.set-amount-button:hover {
+  background-color: #e68900;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  width: 100px;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1px solid #555555;
+  margin-right: 5px;
+}
+
+.input-container input:focus {
+  outline: none;
+  border-color: #ff9800;
+}
+
+.input-container span {
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.input-container .set-amount-button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+.satoshi-text {
+  font-size: 1em;
+  margin: 10px 0 5px 0;
+}
+
+.satoshi-amount {
+  font-size: 2.5em;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left {
+    border-right: none; /* Remove vertical dividing line */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add horizontal dividing line */
   }
 }
