@@ -5,7 +5,12 @@ const BitcoinPriceTracker = ({ currency, onCurrencyChange, price }) => {
 
   return (
     <div className="bitcoin-price-tracker">
-      <h2>Bitcoin Dashboard</h2>
+      <img
+        src={`${process.env.PUBLIC_URL}/logo512.png`}
+        alt="BTC Logo"
+        className="app-logo"
+      />
+      <h2>Bitcoin</h2>
       <p className="bitcoin-price">
         {price ? `${price.toLocaleString()} ${currency}` : 'Loading...'}
       </p>
