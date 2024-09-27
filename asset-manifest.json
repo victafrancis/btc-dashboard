@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/btc-dashboard/static/css/main.26399967.css",
+    "main.js": "/btc-dashboard/static/js/main.cee24b66.js",
+    "static/js/453.40db517c.chunk.js": "/btc-dashboard/static/js/453.40db517c.chunk.js",
+    "index.html": "/btc-dashboard/index.html",
+    "main.26399967.css.map": "/btc-dashboard/static/css/main.26399967.css.map",
+    "main.cee24b66.js.map": "/btc-dashboard/static/js/main.cee24b66.js.map",
+    "453.40db517c.chunk.js.map": "/btc-dashboard/static/js/453.40db517c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26399967.css",
+    "static/js/main.cee24b66.js"
+  ]
+}
