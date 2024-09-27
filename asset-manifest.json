@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/btc-dashboard/static/css/main.134879e5.css",
-    "main.js": "/btc-dashboard/static/js/main.a363f8fb.js",
+    "main.css": "/btc-dashboard/static/css/main.8ca3935f.css",
+    "main.js": "/btc-dashboard/static/js/main.53c76a1e.js",
     "static/js/453.40db517c.chunk.js": "/btc-dashboard/static/js/453.40db517c.chunk.js",
     "index.html": "/btc-dashboard/index.html",
-    "main.134879e5.css.map": "/btc-dashboard/static/css/main.134879e5.css.map",
-    "main.a363f8fb.js.map": "/btc-dashboard/static/js/main.a363f8fb.js.map",
+    "main.8ca3935f.css.map": "/btc-dashboard/static/css/main.8ca3935f.css.map",
+    "main.53c76a1e.js.map": "/btc-dashboard/static/js/main.53c76a1e.js.map",
     "453.40db517c.chunk.js.map": "/btc-dashboard/static/js/453.40db517c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.134879e5.css",
-    "static/js/main.a363f8fb.js"
+    "static/css/main.8ca3935f.css",
+    "static/js/main.53c76a1e.js"
   ]
 }
