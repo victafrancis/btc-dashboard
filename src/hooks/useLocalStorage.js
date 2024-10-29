@@ -6,7 +6,8 @@ const useLocalStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
     try {
       const item = window.localStorage.getItem(key);
-      return item !== null ? parseFloat(item) : initialValue;
+      // Parse the stored JSON or return initialValue
+      return item ? JSON.parse(item) : initialValue;
     } catch (error) {
       console.error(`Error reading Local Storage key "${key}":`, error);
       return initialValue;
@@ -16,7 +17,8 @@ const useLocalStorage = (key, initialValue) => {
   // Update Local Storage whenever the state changes
   useEffect(() => {
     try {
-      window.localStorage.setItem(key, storedValue);
+      // Serialize the value before storing
+      window.localStorage.setItem(key, JSON.stringify(storedValue));
     } catch (error) {
       console.error(`Error setting Local Storage key "${key}":`, error);
     }

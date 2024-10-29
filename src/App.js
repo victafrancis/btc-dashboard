@@ -2,11 +2,13 @@
 import React, { useState, useEffect } from 'react';
 import BitcoinPriceTracker from './components/BitcoinPriceTracker/BitcoinPriceTracker';
 import SatoshiEquivalentCalculator from './components/SatoshiEquivalentCalculator/SatoshiEquivalentCalculator';
+import useLocalStorage from './hooks/useLocalStorage';
 import './App.css';
 
 function App() {
-  const [currency, setCurrency] = useState('USD');
-  const [price, setPrice] = useState(null);
+  // Use the custom hook to persist 'currency' state
+  const [currency, setCurrency] = useLocalStorage('currency', 'USD');
+  const [price, setPrice] = useState(null); // Optional: Persist price if desired
 
   const fetchPrice = async () => {
     try {
